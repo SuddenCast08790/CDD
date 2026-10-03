@@ -1,17 +1,19 @@
-# C-- 🪓
+# C Decrease Decrease 🪓
 
 > **C, but with fewer parts.**
 > 从 GCC 分支 (fork) 出来的极简主义编译器实验。我们大砍了 C 语言——
 > 砍掉分号、砍掉 `for`、砍掉 `==`，然后创造了一些**奇怪的语法**。
 
-![C-- Logo](docs/img/logo.png)
+
+📜 **完整语法手册：[docs/SYNTAX.md](docs/SYNTAX.md)** — 逐条对齐参考实现，含 EBNF、错误信息博物馆与 C→C--DD 对照表。
+![C Decrease Decrease Logo](docs/img/logo.png)
 
 ---
 
 ## 宣传语 (Slogans)
 
 - **「少即是多，砍即是爱。」** — *Less is more. Chopping is love.*
-- **「C++ 在加东西，C-- 在做减法。」**
+- **「C++ 在加东西，C Decrease Decrease 在做减法。」**
 - **「我们删掉了 90% 的 C，剩下的 10% 全是 bug 的快乐。」**
 - **「没有分号，没有回头。」** *(No semicolons. No regrets.)*
 - **「编译通过 = 程序正确（不保证）。」**
@@ -19,7 +21,7 @@
 
 ---
 
-## 为什么叫 C--？
+## 为什么叫 C Decrease Decrease？
 
 C++ 每十年加一百个特性。我们反着来：
 每次 release **删除**一批特性。版本号使用递减整数：
@@ -70,7 +72,7 @@ func main() -> num:
 
 ## 工具链
 
-本仓库包含一个参考实现 `src/ccmm.py`（约 600 行），它把 C--
+本仓库包含一个参考实现 `src/ccmm.py`（约 600 行），它把 C Decrease Decrease
 **转译 (transpile)** 成合法 C，再调用系统 `cc` 编译。
 这就是"fork GCC 后大砍"的精神继承者——毕竟完整 GCC 有 3000 万行，
 我们砍到只剩一根命令行。
@@ -93,7 +95,7 @@ python3 src/ccmm.py --run examples/fizzbuzz.ccm
 - [ ] v-5: 砍掉 `if`（只留 `unless`）
 - [ ] v-6: 砍掉变量赋值（只许初始化，学 Erlang）
 - [ ] v-7: 砍掉 main 函数（程序从随机一行开始执行）
-- [ ] v-∞: 砍掉 C--
+- [ ] v-∞: 砍掉 C Decrease Decrease
 
 ## License
 

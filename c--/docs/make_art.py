@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate C-- branding art with Pillow (no external assets needed).
+"""Generate C Decrease Decrease branding art with Pillow (no external assets needed).
 
 Produces:
   docs/img/logo.png      - square logo: an axe chopping a semicolon
@@ -166,9 +166,9 @@ def make_logo():
                           (0.00, 0.20, 0.007)]:
         dr.ellipse([vx+dx*W-fr*W, vy+dy*H-fr*W,
                     vx+dx*W+fr*W, vy+dy*H+fr*W], fill=frag)
-    # wordmark bottom-left: C--
+    # wordmark bottom-left: C Decrease Decrease
     fw = font(int(W * 0.16))
-    dr.text((W * 0.09, H * 0.74), "C--", font=fw, fill=DARK)
+    dr.text((W * 0.035, H * 0.68), "C Decrease\nDecrease", font=fw, fill=DARK)
     dmin = font(int(W * 0.030))
     dr.text((W * 0.10, H * 0.90), "chopped from gcc · v-4",
             font=dmin, fill=GRAY)
@@ -218,14 +218,14 @@ def make_banner():
            (tx - half * nx + g * ux, ty - half * ny + g * uy)]
     dr.polygon(gap, fill=INK)
     # headline
-    fh = font(int(H * 0.20))
-    dr.text((int(W * 0.26), int(H * 0.16)), "C--", font=fh, fill=INK)
+    fh = font(int(H * 0.13))
+    dr.text((int(W * 0.26), int(H * 0.16)), "C Decrease Decrease", font=fh, fill=INK)
     fs = font(int(H * 0.075))
     dr.text((int(W * 0.26), int(H * 0.46)),
             "Less is more. Chopping is love.", font=fs, fill=ORANGE)
     fl = font(int(H * 0.055), mono=True)
     dr.text((int(W * 0.26), int(H * 0.66)),
-            'fork gcc -> chop ; chop for chop == -> "C--"',
+            'fork gcc -> chop ; chop for chop == -> "C Decrease Decrease"',
             font=fl, fill=(150, 160, 190))
     fl2 = font(int(H * 0.05), mono=True)
     dr.text((int(W * 0.26), int(H * 0.80)),
