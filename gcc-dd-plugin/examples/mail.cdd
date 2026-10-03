@@ -1,0 +1,26 @@
+# mail.cdd -- the flagship C Decrease Decrease program
+# (compiled by: g--cc src.cdd -o mail.exe, exactly as promised)
+
+mail(subject, body) :
+    shout("sending mail: {subject}")
+    whisper("  body says: ")
+    shout(body)
+    back 1
+
+main() :
+    n = 42
+    shout("Hello from C Decrease Decrease! Semicolons died for this.")
+    if n > 40 &also n isnt 99 :
+        shout("the answer arrived: {n}")
+    otherwise
+        shout("suspicious answer")
+
+    loop i from 1 to 5 :
+        shout("i is {i}")
+
+    m = maybe(nothing, n)
+    shout("m settled at {m}")
+
+    sent = mail("re: the axe", "less is more")
+    unless sent is 0 :
+        shout("mail went out ({sent})")
