@@ -1,0 +1,17 @@
+# pointers.ccm — 纪念被砍掉的 *p，复活成 p^
+# 解引用现在带指数记法：内存的平方根是地址（并不）
+
+borrow <stdio>
+
+func main() -> num:
+    let v is 96
+    let p = &v                       # 取地址还活着，我们还没那么疯
+    shout("address holds {(*p)}\n")  # 手写 (*p) 也可以，老派玩家
+    v = maybe(v > 50, v + 2, v - 2)  # 三元 ?: 被砍，maybe 顶班
+    let q is nothing                 # NULL 已死，nothing 长存
+    unless q != nothing:
+        shout("q is pure void\n")
+    while v > 100:
+        v = v / 2
+    shout("v settled at {v}\n")
+    back 0

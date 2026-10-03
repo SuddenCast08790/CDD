@@ -1,0 +1,15 @@
+# hello.ccm — 你的第一段 C-- 代码
+# 注意：没有分号。它们被砍了。别找它们了。
+
+borrow <stdio>
+
+func main() -> num:
+    let msg is "Hello from C--! Semicolons died for this.\n"
+    shout(msg)
+    let x is 41
+    x = x + 1                       # 算术还活着，暂时
+    if x is 42:
+        shout("the answer arrived: {x}\n")
+    else:
+        shout("the answer is late\n")
+    back 0
