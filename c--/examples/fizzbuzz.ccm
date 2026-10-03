@@ -1,0 +1,22 @@
+# fizzbuzz.ccm — 用被砍剩的语言做最古老的面试题
+# loop..until: for 循环已被处决，这是它的招魂仪式
+
+borrow <stdio>
+
+func classify(n is num) -> none:
+    pick n mod 15:
+        case 0 thunk:
+            shout("FizzBuzz\n")
+        case 3, 6, 9, 12 thunk:
+            shout("Fizz\n")
+        case 5, 10 thunk:
+            shout("Buzz\n")
+        default thunk:
+            shout("{n}\n")
+
+func main() -> num:
+    loop i from 1 to 20:
+        classify(i)
+    until i > 20                     # 招魂词：until 一到，loop 安息
+    shout("done. that took one loop and zero for-loops\n")
+    back 0
